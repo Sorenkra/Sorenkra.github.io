@@ -1,22 +1,102 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Parcoursup - Formations</title>
-  <link href="feuilledestyle.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site - Actualités Football</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background: #0056b3;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .news-section {
+            margin: 2rem 0;
+        }
+        .news-card {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+        .news-card h3 {
+            margin-top: 0;
+            color: #0056b3;
+        }
+        .news-card a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        .news-card a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
-
 <body>
-  <h1>Marché des transfers</h1>
-  <h1>Clubs à suivre</h1>
-  <h1>Ballon d'or</h1>
-  <ul>
-    <li>Informatique</li>
-    <li>Médecine</li>
-    <li>Architecture</li>
-  </ul>
-</body>
+    <header>
+        <div class="container">
+            <h1>Mon Site Football</h1>
+            <p>Toute l'actualité du football en un seul endroit</p>
+        </div>
+    </header>
 
+    <div class="container">
+        <section class="news-section">
+            <h2>Actualités Football</h2>
+            
+            <div class="news-card">
+                <h3><a href="https://www.lequipe.fr/Football/" target="_blank">L'Équipe - Football</a></h3>
+                <p>Les dernières nouvelles du football français et international sur L'Équipe.</p>
+            </div>
+            
+            <div class="news-card">
+                <h3><a href="https://www.footmercato.net/" target="_blank">Foot Mercato</a></h3>
+                <p>Transferts, rumeurs et actualités des clubs sur Foot Mercato.</p>
+            </div>
+            
+            <div class="news-card">
+                <h3><a href="https://www.sofoot.com/" target="_blank">So Foot</a></h3>
+                <p>Actualité football avec analyses et contenus originaux sur So Foot.</p>
+            </div>
+            
+            <div class="news-card">
+                <h3><a href="https://www.uefa.com/" target="_blank">UEFA</a></h3>
+                <p>Actualités sur les compétitions européennes (Ligue des Champions, Europa League).</p>
+            </div>
+            
+            <div class="news-card">
+                <h3><a href="https://www.fifa.com/" target="_blank">FIFA</a></h3>
+                <p>Nouvelles du football mondial et des compétitions internationales.</p>
+            </div>
+        </section>
+        
+        <!-- Vous pouvez ajouter d'autres sections de votre site ici -->
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Mon Site Football. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
 </html>
