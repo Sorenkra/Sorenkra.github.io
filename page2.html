@@ -2,94 +2,39 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roland-Garros 2025 - Nadal & Les Stars du Tennis</title>
+  <title>Roland-Garros 2025 - Nadal</title>
   <style>
-    :root {
-      --clay: #E3735E;
-      --dark: #1A2E35;
-      --light: #ffffff;
-      --gold: #FFD700;
-      --grey: #f1f1f1;
-    }
-    
     body {
-      font-family: 'Segoe UI', Arial, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: var(--grey);
-      color: var(--dark);
-      line-height: 1.6;
+      background-color: #f5f5f5;
     }
     
     header {
-      background: linear-gradient(90deg, var(--dark), var(--clay));
+      background: #e3735e;
       color: white;
       text-align: center;
-      padding: 2rem 0;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .header-pattern {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle fill="%23ffffff10" cx="25" cy="25" r="20"/><circle fill="%23ffffff10" cx="75" cy="75" r="20"/></svg>');
-      opacity: 0.1;
+      padding: 20px 0;
     }
     
     .container {
-      max-width: 1200px;
+      width: 90%;
+      max-width: 800px;
       margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    h1, h2, h3 {
-      font-weight: 700;
+      padding: 20px 0;
     }
     
     h1 {
       margin: 0;
-      font-size: 2.5rem;
-      letter-spacing: 1px;
-    }
-    
-    .rg-logo {
-      height: 60px;
-      margin-bottom: 1rem;
-    }
-    
-    .section-title {
-      border-left: 5px solid var(--clay);
-      padding-left: 15px;
-      margin: 2rem 0 1.5rem;
-    }
-    
-    .grid-2cols {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-      gap: 2rem;
     }
     
     .card {
       background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    }
-    
-    .card-header {
-      background: var(--dark);
-      color: white;
-      padding: 1rem;
-      font-weight: bold;
-    }
-    
-    .card-body {
-      padding: 1.5rem;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     
     table {
@@ -98,349 +43,99 @@
     }
     
     th, td {
-      padding: 12px 15px;
-      text-align: left;
+      padding: 8px;
       border-bottom: 1px solid #ddd;
+      text-align: left;
     }
     
     th {
-      background-color: var(--dark);
+      background-color: #333;
       color: white;
     }
     
-    tr:nth-child(even) {
-      background-color: #f9f9f9;
-    }
-    
-    .player-nadal {
-      background-color: #FFF5F2 !important;
+    .nadal {
+      background-color: #fff0f0;
       font-weight: bold;
     }
     
     .player-img {
       width: 80px;
       height: 80px;
-      object-fit: cover;
       border-radius: 50%;
-      border: 3px solid var(--clay);
-    }
-    
-    .news-item {
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px dashed #ccc;
-    }
-    
-    .news-item:last-child {
-      border-bottom: none;
-    }
-    
-    .news-date {
-      color: var(--clay);
-      font-weight: bold;
-      font-size: 0.9rem;
-    }
-    
-    .nadal-profile {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-    
-    .nadal-stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    
-    .stat-item {
-      background: white;
-      padding: 1rem;
-      border-radius: 5px;
-      text-align: center;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    
-    .stat-value {
-      font-size: 1.8rem;
-      font-weight: bold;
-      color: var(--clay);
-      margin: 0.5rem 0;
+      border: 3px solid #e3735e;
+      float: left;
+      margin-right: 15px;
     }
     
     footer {
-      background: var(--dark);
+      background: #333;
       color: white;
       text-align: center;
-      padding: 2rem 0;
-      margin-top: 3rem;
-    }
-    
-    @media (max-width: 768px) {
-      .grid-2cols {
-        grid-template-columns: 1fr;
-      }
-      
-      .nadal-profile {
-        flex-direction: column;
-      }
+      padding: 15px 0;
+      margin-top: 20px;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <div class="header-pattern"></div>
     <div class="container">
-      <img src="https://www.rolandgarros.com/img/og-share.jpg" alt="Roland Garros Logo" class="rg-logo">
       <h1>Roland-Garros 2025</h1>
-      <p>Tournoi du Grand Chelem - Paris, France</p>
+      <p>Tournoi de tennis - Paris</p>
     </div>
   </header>
 
   <div class="container">
-    <!-- Têtes de série -->
-    <section>
-      <h2 class="section-title">Têtes de série - Simple Messieurs</h2>
-      <div class="card">
-        <div class="card-header">Classement ATP & Têtes de série</div>
-        <div class="card-body">
-          <img src="https://www.tennisworldusa.org/imgb/125348/roland-garros-2024-dates-draws-prize-money-and-everything-you-need-to-know.jpg" alt="Court Philippe-Chatrier" style="width:100%; margin-bottom:1.5rem; border-radius:5px;">
-          
-          <table>
-            <thead>
-              <tr>
-                <th>Rang</th>
-                <th>Joueur</th>
-                <th>Nationalité</th>
-                <th>Âge</th>
-                <th>Points ATP</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="player-nadal">
-                <td>1</td>
-                <td><strong>Rafael Nadal</strong></td>
-                <td>Espagne</td>
-                <td>38</td>
-                <td>9,850</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Carlos Alcaraz</td>
-                <td>Espagne</td>
-                <td>22</td>
-                <td>8,920</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Jannik Sinner</td>
-                <td>Italie</td>
-                <td>23</td>
-                <td>8,450</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Novak Djokovic</td>
-                <td>Serbie</td>
-                <td>38</td>
-                <td>7,980</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>Daniil Medvedev</td>
-                <td>Russie</td>
-                <td>29</td>
-                <td>6,750</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Alexander Zverev</td>
-                <td>Allemagne</td>
-                <td>28</td>
-                <td>5,890</td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>Stefanos Tsitsipas</td>
-                <td>Grèce</td>
-                <td>26</td>
-                <td>5,430</td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>Casper Ruud</td>
-                <td>Norvège</td>
-                <td>26</td>
-                <td>4,950</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Holger Rune</td>
-                <td>Danemark</td>
-                <td>22</td>
-                <td>4,620</td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>Andrey Rublev</td>
-                <td>Russie</td>
-                <td>27</td>
-                <td>4,350</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+    <!-- Classement -->
+    <div class="card">
+      <h2>Classement ATP</h2>
+      <table>
+        <tr>
+          <th>Rang</th>
+          <th>Joueur</th>
+          <th>Points</th>
+        </tr>
+        <tr class="nadal">
+          <td>1</td>
+          <td>Rafael Nadal</td>
+          <td>9850</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Carlos Alcaraz</td>
+          <td>8920</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Jannik Sinner</td>
+          <td>8450</td>
+        </tr>
+      </table>
+    </div>
 
-    <!-- Résultats et matchs -->
-    <section>
-      <h2 class="section-title">Résultats & Parcours</h2>
-      <div class="grid-2cols">
-        <!-- Résultats récents -->
-        <div class="card">
-          <div class="card-header">Derniers résultats (1/4 de finale)</div>
-          <div class="card-body">
-            <h3>Tableau principal</h3>
-            <ul style="list-style-type:none; padding-left:0;">
-              <li>✅ Nadal bat. Tsitsipas (6-4, 7-6, 6-2)</li>
-              <li>✅ Alcaraz bat. Medvedev (6-3, 6-4, 3-6, 7-5)</li>
-              <li>✅ Djokovic bat. Zverev (7-5, 6-7, 6-3, 6-4)</li>
-              <li>✅ Sinner bat. Ruud (6-2, 6-4, 6-4)</li>
-            </ul>
-            
-            <h3 style="margin-top:1.5rem;">Prochains matchs (1/2 finale)</h3>
-            <ul style="list-style-type:none; padding-left:0;">
-              <li>⏳ Nadal [1] vs. Sinner [3]</li>
-              <li>⏳ Alcaraz [2] vs. Djokovic [4]</li>
-            </ul>
-          </div>
-        </div>
-        
-        <!-- Classements -->
-        <div class="card">
-          <div class="card-header">Historique Roland-Garros</div>
-          <div class="card-body">
-            <h3>Derniers vainqueurs</h3>
-            <table>
-              <tr>
-                <th>Année</th>
-                <th>Vainqueur</th>
-                <th>Finaliste</th>
-              </tr>
-              <tr class="player-nadal">
-                <td>2024</td>
-                <td>Rafael Nadal</td>
-                <td>Carlos Alcaraz</td>
-              </tr>
-              <tr class="player-nadal">
-                <td>2023</td>
-                <td>Rafael Nadal</td>
-                <td>Novak Djokovic</td>
-              </tr>
-              <tr>
-                <td>2022</td>
-                <td>Rafael Nadal</td>
-                <td>Casper Ruud</td>
-              </tr>
-              <tr>
-                <td>2021</td>
-                <td>Novak Djokovic</td>
-                <td>Stefanos Tsitsipas</td>
-              </tr>
-              <tr>
-                <td>2020</td>
-                <td>Rafael Nadal</td>
-                <td>Novak Djokovic</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Résultats -->
+    <div class="card">
+      <h2>Derniers résultats</h2>
+      <p><strong>Quarts de finale :</strong></p>
+      <ul>
+        <li>Nadal bat. Tsitsipas (6-4, 7-6, 6-2)</li>
+        <li>Alcaraz bat. Medvedev (6-3, 6-4, 3-6, 7-5)</li>
+      </ul>
+    </div>
 
-    <!-- Actus et Nadal -->
-    <section>
-      <h2 class="section-title">Actualités & Focus Nadal</h2>
-      <div class="card">
-        <div class="card-body">
-          <div class="news-item">
-            <div class="news-date">28 Mai 2025</div>
-            <h3>Nadal vise un 16ème titre à Roland-Garros</h3>
-            <p>À 38 ans, Rafael Nadal reste le roi incontesté de la terre battue. Après sa victoire en quart contre Tsitsipas, il déclare : "Je joue encore avec la même passion qu'à 20 ans."</p>
-          </div>
-          
-          <div class="news-item">
-            <div class="news-date">25 Mai 2025</div>
-            <h3>Nouvelle raquette pour Nadal</h3>
-            <p>Babolat a dévoilé la nouvelle raquette spécialement conçue pour Nadal avec un tamis légèrement agrandi pour plus de puissance, tout en conservant le contrôle.</p>
-          </div>
-          
-          <div class="news-item">
-            <div class="news-date">20 Mai 2025</div>
-            <h3>Nadal : "Ce sera probablement mon dernier Roland-Garros"</h3>
-            <p>Dans une interview exclusive, le champion espagnol a laissé entendre qu'il prendrait sa retraite après cette saison, souhaitant "laisser la place aux jeunes".</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Focus Rafael Nadal -->
-    <section>
-      <h2 class="section-title">Focus : Rafael Nadal 🎾🏆</h2>
-      <div class="card">
-        <div class="card-body">
-          <div class="nadal-profile">
-            <img src="https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_lg_2x/f_auto/primary/wlydfspgvprqnlqkbt6e" alt="Rafael Nadal" class="player-img">
-            <div>
-              <h3>Rafael Nadal #1 ATP</h3>
-              <p>Le "Roi de la Terre Battue" domine Roland-Garros depuis 2005. Avec son jeu puissant et son mental d'acier, Nadal détient le record de titres en Grand Chelem (24) et à Roland-Garros (15).</p>
-            </div>
-          </div>
-          
-          <div class="nadal-stats">
-            <div class="stat-item">
-              <div>Âge</div>
-              <div class="stat-value">38</div>
-              <div>ans</div>
-            </div>
-            <div class="stat-item">
-              <div>Titres RG</div>
-              <div class="stat-value">15</div>
-              <div>record absolu</div>
-            </div>
-            <div class="stat-item">
-              <div>Victoires</div>
-              <div class="stat-value">112</div>
-              <div>à Roland-Garros</div>
-            </div>
-            <div class="stat-item">
-              <div>Défaites</div>
-              <div class="stat-value">3</div>
-              <div>seulement à RG</div>
-            </div>
-          </div>
-          
-          <h3 style="margin-top:1.5rem;">Palmarès 2025</h3>
-          <ul>
-            <li>🏆 Open d'Australie - Vainqueur</li>
-            <li>🥇 Masters 1000 de Monte-Carlo</li>
-            <li>🥇 Masters 1000 de Madrid</li>
-            <li>🥈 Masters 1000 de Rome</li>
-            <li>15-0 sur terre battue cette saison</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+    <!-- Focus Nadal -->
+    <div class="card">
+      <h2>Rafael Nadal</h2>
+      <img src="https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_lg_2x/f_auto/primary/wlydfspgvprqnlqkbt6e" class="player-img">
+      <p>Le roi de la terre battue vise un 16ème titre à Roland-Garros en 2025.</p>
+      <p><strong>Âge :</strong> 38 ans</p>
+      <p><strong>Titres RG :</strong> 15</p>
+      <p><strong>Palmarès 2025 :</strong> Vainqueur à l'Open d'Australie</p>
+    </div>
   </div>
 
   <footer>
-    <div class="container">
-      <p>© 2025 Actualités Tennis - Tous droits réservés</p>
-      <p>Retour à <a href="index.html" style="color:var(--gold);">l'accueil</a></p>
-    </div>
+    <p>© 2025 - Site tennis simplifié</p>
   </footer>
 </body>
 </html>
