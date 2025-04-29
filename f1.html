@@ -2,33 +2,98 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>F1 - Mon Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formule 1 - Mon Portail Sportif</title>
     <style>
-        body { font-family: Arial; margin: 0; padding: 0; }
-        header { background: #e10600; color: white; padding: 1rem; text-align: center; }
-        .container { width: 90%; margin: 1rem auto; }
-        .card { border: 1px solid #ddd; padding: 1rem; margin-bottom: 1rem; }
-        footer { background: #333; color: white; text-align: center; padding: 1rem; }
-        .ferrari { background-color: #fff0f0; }
+        :root {
+            --primary: #e10600;
+            --secondary: #2c3e50;
+            --accent: #00d2be;
+            --ferrari: #dc0000;
+        }
+        .race-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .race-date {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        .driver-card {
+            background: white;
+            border-left: 4px solid var(--ferrari);
+            transition: all 0.3s ease;
+        }
+        .driver-card:hover {
+            transform: translateX(5px);
+        }
+        .team-ferrari {
+            border-left-color: var(--ferrari);
+        }
+        .team-mercedes {
+            border-left-color: var(--accent);
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Formule 1</h1>
+        <div class="container">
+            <h1>🏎️ Formule 1</h1>
+            <p>Saison 2024 - Calendrier et classements</p>
+            <a href="index.html" class="home-btn">← Retour à l'accueil</a>
+        </div>
     </header>
 
     <div class="container">
-        <div class="card">
-            <h3>Classement</h3>
-            <table>
-                <tr class="ferrari"><td>1</td><td>Leclerc</td><td>Ferrari</td></tr>
-                <tr><td>2</td><td>Verstappen</td><td>Red Bull</td></tr>
-            </table>
+        <div class="sports-grid">
+            <!-- Prochain Grand Prix -->
+            <div class="race-card">
+                <div class="sport-image">
+                    <img src="https://images.unsplash.com/photo-1580261450048-dc1d5b8d3b1e" alt="Circuit F1">
+                    <div class="race-date">5 mars 2024</div>
+                </div>
+                <div class="sport-info">
+                    <h2>Grand Prix de Bahreïn</h2>
+                    <p><strong>Circuit :</strong> Sakhir</p>
+                    <p><strong>Tours :</strong> 57</p>
+                    <a href="#" class="btn">Voir horaires</a>
+                </div>
+            </div>
+
+            <!-- Classement Pilotes -->
+            <div class="sport-card">
+                <div class="sport-info">
+                    <h2>Classement 2023</h2>
+                    
+                    <div class="driver-card">
+                        <h3>1. Max Verstappen</h3>
+                        <p>Red Bull Racing - 575 points</p>
+                    </div>
+                    
+                    <div class="driver-card team-ferrari">
+                        <h3>2. Charles Leclerc</h3>
+                        <p>Ferrari - 308 points</p>
+                    </div>
+                    
+                    <div class="driver-card team-mercedes">
+                        <h3>3. Lewis Hamilton</h3>
+                        <p>Mercedes - 305 points</p>
+                    </div>
+                    
+                    <a href="#" class="btn">Classement complet</a>
+                </div>
+            </div>
         </div>
     </div>
 
     <footer>
-        <p>© 2023 Mon Site</p>
+        <p>&copy; 2023 Mon Portail Sportif - Données F1 2023</p>
     </footer>
 </body>
 </html>
