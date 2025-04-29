@@ -2,32 +2,107 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Tennis - Mon Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis - Mon Portail Sportif</title>
     <style>
-        body { font-family: Arial; margin: 0; padding: 0; }
-        header { background: #e3735e; color: white; padding: 1rem; text-align: center; }
-        .container { width: 90%; margin: 1rem auto; }
-        .card { border: 1px solid #ddd; padding: 1rem; margin-bottom: 1rem; }
-        footer { background: #333; color: white; text-align: center; padding: 1rem; }
+        :root {
+            --primary: #e3735e;
+            --secondary: #c0392b;
+            --accent: #f1c40f;
+            --court: #ecf0f1;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+        }
+        .tournament-card {
+            background: white;
+            border-radius: 10px;
+            border-top: 4px solid var(--accent);
+            overflow: hidden;
+        }
+        .player-profile {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .player-rank {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-right: 15px;
+            min-width: 30px;
+            text-align: center;
+        }
+        .court-bg {
+            background-color: var(--court);
+            padding: 15px;
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Actualité Tennis</h1>
+        <div class="container">
+            <h1>🎾 Tennis</h1>
+            <p>Tournois du Grand Chelem et classements ATP/WTA</p>
+            <a href="index.html" class="home-btn">← Retour à l'accueil</a>
+        </div>
     </header>
 
     <div class="container">
-        <div class="card">
-            <h3>Classement ATP</h3>
-            <ol>
-                <li>Novak Djokovic</li>
-                <li>Carlos Alcaraz</li>
-            </ol>
+        <div class="sports-grid">
+            <!-- Roland-Garros -->
+            <div class="tournament-card">
+                <div class="sport-image">
+                    <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e" alt="Roland-Garros">
+                </div>
+                <div class="sport-info">
+                    <h2>Roland-Garros 2024</h2>
+                    <p><strong>Date :</strong> 26 mai - 9 juin 2024</p>
+                    <p><strong>Surface :</strong> Terre battue</p>
+                    <div class="court-bg">
+                        <h3>Derniers vainqueurs :</h3>
+                        <p>🏆 Novak Djokovic (2023)</p>
+                        <p>🏆 Iga Świątek (2023)</p>
+                    </div>
+                    <a href="#" class="btn">Voir le calendrier</a>
+                </div>
+            </div>
+
+            <!-- Classement ATP -->
+            <div class="tournament-card">
+                <div class="sport-info">
+                    <h2>Classement ATP</h2>
+                    <div class="player-profile">
+                        <div class="player-rank">1</div>
+                        <div>
+                            <h3>Novak Djokovic</h3>
+                            <p>24 titres du Grand Chelem</p>
+                        </div>
+                    </div>
+                    <div class="player-profile">
+                        <div class="player-rank">2</div>
+                        <div>
+                            <h3>Carlos Alcaraz</h3>
+                            <p>Jeune prodige espagnol</p>
+                        </div>
+                    </div>
+                    <a href="#" class="btn">Voir le classement complet</a>
+                </div>
+            </div>
         </div>
     </div>
 
     <footer>
-        <p>© 2023 Mon Site</p>
+        <p>&copy; 2023 Mon Portail Sportif - Données mises à jour décembre 2023</p>
     </footer>
 </body>
 </html>
