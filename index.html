@@ -2,80 +2,73 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Foot Actu - PSG</title>
+    <title>Foot Actu</title>
     <style>
-        body { font-family: Arial; margin: 0; background: #f0f0f0; }
-        header { background: #004170; color: white; padding: 15px; text-align: center; }
-        .container { width: 90%; margin: auto; padding: 10px 0; }
-        .card { background: white; padding: 15px; margin-bottom: 15px; }
-        footer { background: #333; color: white; text-align: center; padding: 10px; }
-        a { color: #004170; text-decoration: none; }
-        .player { margin: 10px 0; }
-        .player img { width: 60px; height: 60px; border-radius: 50%; margin-right: 10px; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+        header {
+            background: #0056b3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .news {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        a {
+            color: #0056b3;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Foot Actu</h1>
+        <p>Les infos foot en direct</p>
     </header>
 
     <div class="container">
-        <!-- Page Accueil -->
-        <div id="accueil">
-            <h2>Sources Foot</h2>
-            <div class="card">
-                <h3>L'Équipe</h3>
-                <a href="https://www.lequipe.fr/Football/" target="_blank">Visiter →</a>
-            </div>
-            <div class="card">
-                <h3>PSG</h3>
-                <a href="#psg">Voir la page PSG →</a>
-            </div>
+        <h2>Sources d'actualité</h2>
+        
+        <div class="news">
+            <h3>L'Équipe</h3>
+            <p>Toute l'actualité du foot en France et Europe.</p>
+            <a href="https://www.lequipe.fr/Football/" target="_blank">Visiter</a>
         </div>
-
-        <!-- Page PSG -->
-        <div id="psg" style="display:none;">
-            <h2>Paris Saint-Germain</h2>
-            
-            <div class="card">
-                <h3>Histoire</h3>
-                <p>Fondé en 1970. Stade : Parc des Princes</p>
-            </div>
-            
-            <div class="card">
-                <h3>Trophées</h3>
-                <ul>
-                    <li>11x Ligue 1</li>
-                    <li>14x Coupe de France</li>
-                </ul>
-            </div>
-            
-            <div class="card">
-                <h3>Légendes</h3>
-                <div class="player">
-                    <img src="https://tinyurl.com/neymar-psg" alt="Neymar">
-                    <span>Neymar (2017-2023) - 118 buts</span>
-                </div>
-                <div class="player">
-                    <img src="https://tinyurl.com/mbappe-psg" alt="Mbappé">
-                    <span>Mbappé (2017-...) - Recordman</span>
-                </div>
-            </div>
-            
-            <a href="#accueil">← Retour</a>
+        
+        <div class="news">
+            <h3>Foot Mercato</h3>
+            <p>Les transferts et rumeurs du foot.</p>
+            <a href="https://www.footmercato.net/" target="_blank">Visiter</a>
+        </div>
+        
+        <div class="news">
+            <h3>UEFA</h3>
+            <p>Champions League et Europa League.</p>
+            <a href="https://www.uefa.com/" target="_blank">Visiter</a>
         </div>
     </div>
 
     <footer>
         <p>© 2023 Foot Actu</p>
     </footer>
-
-    <script>
-        // Navigation simple entre les pages
-        if(window.location.hash === "#psg") {
-            document.getElementById("accueil").style.display = "none";
-            document.getElementById("psg").style.display = "block";
-        }
-    </script>
 </body>
 </html>
