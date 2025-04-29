@@ -1,187 +1,81 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Actualité Multisportive - Accueil</title>
-  <style>
-    :root {
-      --primary: #2c3e50;
-      --secondary: #3498db;
-      --accent: #e74c3c;
-      --light: #ecf0f1;
-      --dark: #2c3e50;
-    }
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: var(--light);
-      color: var(--dark);
-      line-height: 1.6;
-    }
-    
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: white;
-      text-align: center;
-      padding: 2rem 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-    
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    
-    .intro {
-      text-align: center;
-      padding: 2rem 0;
-      font-size: 1.2rem;
-    }
-    
-    .sports-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      padding: 2rem 0;
-    }
-    
-    .sport-card {
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .sport-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-    }
-    
-    .sport-image {
-      height: 200px;
-      overflow: hidden;
-    }
-    
-    .sport-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-    
-    .sport-card:hover .sport-image img {
-      transform: scale(1.1);
-    }
-    
-    .sport-content {
-      padding: 1.5rem;
-    }
-    
-    .sport-content h2 {
-      margin-top: 0;
-      color: var(--primary);
-    }
-    
-    .btn {
-      display: inline-block;
-      background: var(--secondary);
-      color: white;
-      padding: 0.8rem 1.5rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .btn:hover {
-      background: var(--primary);
-    }
-    
-    footer {
-      background: var(--dark);
-      color: white;
-      text-align: center;
-      padding: 2rem 0;
-      margin-top: 2rem;
-    }
-    
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
-      
-      .sports-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Foot Actu - PSG</title>
+    <style>
+        body { font-family: Arial; margin: 0; background: #f0f0f0; }
+        header { background: #004170; color: white; padding: 15px; text-align: center; }
+        .container { width: 90%; margin: auto; padding: 10px 0; }
+        .card { background: white; padding: 15px; margin-bottom: 15px; }
+        footer { background: #333; color: white; text-align: center; padding: 10px; }
+        a { color: #004170; text-decoration: none; }
+        .player { margin: 10px 0; }
+        .player img { width: 60px; height: 60px; border-radius: 50%; margin-right: 10px; }
+    </style>
 </head>
-
 <body>
-  <header>
+    <header>
+        <h1>Foot Actu</h1>
+    </header>
+
     <div class="container">
-      <h1>Actualité Multisportive</h1>
-      <p>Toutes les dernières infos sur les sports les plus suivis au monde</p>
+        <!-- Page Accueil -->
+        <div id="accueil">
+            <h2>Sources Foot</h2>
+            <div class="card">
+                <h3>L'Équipe</h3>
+                <a href="https://www.lequipe.fr/Football/" target="_blank">Visiter →</a>
+            </div>
+            <div class="card">
+                <h3>PSG</h3>
+                <a href="#psg">Voir la page PSG →</a>
+            </div>
+        </div>
+
+        <!-- Page PSG -->
+        <div id="psg" style="display:none;">
+            <h2>Paris Saint-Germain</h2>
+            
+            <div class="card">
+                <h3>Histoire</h3>
+                <p>Fondé en 1970. Stade : Parc des Princes</p>
+            </div>
+            
+            <div class="card">
+                <h3>Trophées</h3>
+                <ul>
+                    <li>11x Ligue 1</li>
+                    <li>14x Coupe de France</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3>Légendes</h3>
+                <div class="player">
+                    <img src="https://tinyurl.com/neymar-psg" alt="Neymar">
+                    <span>Neymar (2017-2023) - 118 buts</span>
+                </div>
+                <div class="player">
+                    <img src="https://tinyurl.com/mbappe-psg" alt="Mbappé">
+                    <span>Mbappé (2017-...) - Recordman</span>
+                </div>
+            </div>
+            
+            <a href="#accueil">← Retour</a>
+        </div>
     </div>
-  </header>
 
-  <div class="container">
-    <section class="intro">
-      <p>Découvrez les dernières actualités, résultats et analyses sur vos sports préférés. Sélectionnez un sport pour explorer son actualité.</p>
-    </section>
+    <footer>
+        <p>© 2023 Foot Actu</p>
+    </footer>
 
-    <section class="sports-grid">
-      <div class="sport-card">
-        <div class="sport-image">
-          <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Football">
-        </div>
-        <div class="sport-content">
-          <h2>Football ⚽</h2>
-          <p>Suivez toute l'actualité du ballon rond : championnats, transferts, coupes européennes...</p>
-          <a href="page1.html" class="btn">Voir les actus</a>
-        </div>
-      </div>
-
-      <div class="sport-card">
-        <div class="sport-image">
-          <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Tennis">
-        </div>
-        <div class="sport-content">
-          <h2>Tennis 🎾</h2>
-          <p>Tournois du Grand Chelem, ATP, WTA et toute l'actualité des courts.</p>
-          <a href="page2.html" class="btn">Voir les actus</a>
-        </div>
-      </div>
-
-      <div class="sport-card">
-        <div class="sport-image">
-          <img src=https://rtrsports.com/wp-content/uploads/2024/07/pexels-rezk-assaf-10795564.jpg>
-        </div>
-        <div class="sport-content">
-          <h2>Formule 1 🏎️</h2>
-          <p>Grands Prix, classements, innovations technologiques et rivalités.</p>
-          <a href="page3.html" class="btn">Voir les actus</a>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 Actualité Multisportive. Tous droits réservés.</p>
-    </div>
-  </footer>
+    <script>
+        // Navigation simple entre les pages
+        if(window.location.hash === "#psg") {
+            document.getElementById("accueil").style.display = "none";
+            document.getElementById("psg").style.display = "block";
+        }
+    </script>
 </body>
 </html>
