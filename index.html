@@ -2,74 +2,60 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Mon Site Sport</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football - Mon Portail Sportif</title>
     <style>
-        body { 
-            font-family: Arial; 
-            margin: 0; 
-            line-height: 1.5;
+        :root {
+            --primary: #0056b3;
+            --secondary: #003366;
+            --accent: #ffcc00;
         }
-        header {
-            background: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
+        /* [Même structure CSS que index.html avec adaptations] */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
-        .menu {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            padding: 20px;
-        }
-        .menu a {
-            display: block;
-            width: 150px;
-            padding: 15px;
-            background: white;
-            color: #333;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .menu a:hover {
-            background: #f0f0f0;
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        .news-card {
+            border-left: 4px solid var(--accent);
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Mon Portail Sportif</h1>
-        <p>Choisissez votre sport</p>
+        <h1>Football</h1>
+        <p>Toute l'actualité du ballon rond</p>
+        <a href="index.html" class="home-btn">← Retour à l'accueil</a>
     </header>
 
-    <div class="menu">
-        <a href="football.html">
-            ⚽<br>Football Général
-        </a>
-        <a href="psg.html">
-            🔵<br>Paris SG
-        </a>
-        <a href="tennis.html">
-            🎾<br>Tennis
-        </a>
-        <a href="f1.html">
-            🏎️<br>Formule 1
-        </a>
+    <div class="container">
+        <div class="news-grid">
+            <div class="sport-card">
+                <div class="sport-image">
+                    <img src="https://images.unsplash.com/photo-1579952363872-3f0862818f69" alt="Ligue 1">
+                </div>
+                <div class="sport-info">
+                    <h2>Ligue 1</h2>
+                    <p>Classement et résultats du championnat français</p>
+                    <a href="#" class="btn">Voir le classement</a>
+                </div>
+            </div>
+
+            <div class="sport-card">
+                <div class="sport-image">
+                    <img src="https://images.unsplash.com/photo-1508098682722-e99c47a06b43" alt="PSG">
+                </div>
+                <div class="sport-info">
+                    <h2>Paris SG</h2>
+                    <p>Actualités du club capital</p>
+                    <a href="psg.html" class="btn">Voir la page PSG</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer>
-        <p>© 2023 - Tous droits réservés</p>
+        <p>&copy; 2023 Mon Portail Sportif</p>
     </footer>
 </body>
 </html>
