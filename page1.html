@@ -2,101 +2,73 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site - Actualités Football</title>
+    <title>Foot Actu</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
             padding: 0;
-            color: #333;
+            background: #f5f5f5;
         }
         header {
             background: #0056b3;
-            color: #fff;
-            padding: 1rem 0;
+            color: white;
+            padding: 20px;
             text-align: center;
         }
         .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px 0;
         }
-        .news-section {
-            margin: 2rem 0;
-        }
-        .news-card {
+        .news {
+            background: white;
             border: 1px solid #ddd;
-            padding: 1rem;
-            margin-bottom: 1rem;
-            border-radius: 5px;
-        }
-        .news-card h3 {
-            margin-top: 0;
-            color: #0056b3;
-        }
-        .news-card a {
-            color: #0056b3;
-            text-decoration: none;
-        }
-        .news-card a:hover {
-            text-decoration: underline;
+            padding: 15px;
+            margin-bottom: 15px;
         }
         footer {
             background: #333;
-            color: #fff;
+            color: white;
             text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        a {
+            color: #0056b3;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Mon Site Football</h1>
-            <p>Toute l'actualité du football en un seul endroit</p>
-        </div>
+        <h1>Foot Actu</h1>
+        <p>Les infos foot en direct</p>
     </header>
 
     <div class="container">
-        <section class="news-section">
-            <h2>Actualités Football</h2>
-            
-            <div class="news-card">
-                <h3><a href="https://www.lequipe.fr/Football/" target="_blank">L'Équipe - Football</a></h3>
-                <p>Les dernières nouvelles du football français et international sur L'Équipe.</p>
-            </div>
-            
-            <div class="news-card">
-                <h3><a href="https://www.footmercato.net/" target="_blank">Foot Mercato</a></h3>
-                <p>Transferts, rumeurs et actualités des clubs sur Foot Mercato.</p>
-            </div>
-            
-            <div class="news-card">
-                <h3><a href="https://www.sofoot.com/" target="_blank">So Foot</a></h3>
-                <p>Actualité football avec analyses et contenus originaux sur So Foot.</p>
-            </div>
-            
-            <div class="news-card">
-                <h3><a href="https://www.uefa.com/" target="_blank">UEFA</a></h3>
-                <p>Actualités sur les compétitions européennes (Ligue des Champions, Europa League).</p>
-            </div>
-            
-            <div class="news-card">
-                <h3><a href="https://www.fifa.com/" target="_blank">FIFA</a></h3>
-                <p>Nouvelles du football mondial et des compétitions internationales.</p>
-            </div>
-        </section>
+        <h2>Sources d'actualité</h2>
         
-        <!-- Vous pouvez ajouter d'autres sections de votre site ici -->
+        <div class="news">
+            <h3>L'Équipe</h3>
+            <p>Toute l'actualité du foot en France et Europe.</p>
+            <a href="https://www.lequipe.fr/Football/" target="_blank">Visiter</a>
+        </div>
+        
+        <div class="news">
+            <h3>Foot Mercato</h3>
+            <p>Les transferts et rumeurs du foot.</p>
+            <a href="https://www.footmercato.net/" target="_blank">Visiter</a>
+        </div>
+        
+        <div class="news">
+            <h3>UEFA</h3>
+            <p>Champions League et Europa League.</p>
+            <a href="https://www.uefa.com/" target="_blank">Visiter</a>
+        </div>
     </div>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2023 Mon Site Football. Tous droits réservés.</p>
-        </div>
+        <p>© 2023 Foot Actu</p>
     </footer>
 </body>
 </html>
