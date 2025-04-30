@@ -1,99 +1,543 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formule 1 - Mon Portail Sportif</title>
-    <style>
-        :root {
-            --primary: #e10600;
-            --secondary: #2c3e50;
-            --accent: #00d2be;
-            --ferrari: #dc0000;
-        }
-        .race-card {
-            position: relative;
-            overflow: hidden;
-        }
-        .race-date {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 14px;
-        }
-        .driver-card {
-            background: white;
-            border-left: 4px solid var(--ferrari);
-            transition: all 0.3s ease;
-        }
-        .driver-card:hover {
-            transform: translateX(5px);
-        }
-        .team-ferrari {
-            border-left-color: var(--ferrari);
-        }
-        .team-mercedes {
-            border-left-color: var(--accent);
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actualité F1 2025 - Ferrari & Leclerc</title>
+  <style>
+    :root {
+      --red: #e10600;
+      --dark: #000000;
+      --light: #ffffff;
+      --yellow: #ffd700;
+      --grey: #f1f1f1;
+    }
+    
+    body {
+      font-family: 'Titillium Web', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--grey);
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    
+    header {
+      background: linear-gradient(90deg, var(--dark), var(--red));
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header-pattern {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23ffffff10" width="50" height="50" x="50"/><rect fill="%23ffffff10" width="50" height="50" y="50"/></svg>');
+      opacity: 0.1;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    h1, h2, h3 {
+      font-weight: 700;
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    .f1-logo {
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+    
+    .section-title {
+      border-left: 5px solid var(--red);
+      padding-left: 15px;
+      margin: 2rem 0 1.5rem;
+    }
+    
+    .grid-2cols {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 2rem;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+    
+    .card-header {
+      background: var(--dark);
+      color: white;
+      padding: 1rem;
+      font-weight: bold;
+    }
+    
+    .card-body {
+      padding: 1.5rem;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: var(--dark);
+      color: white;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+    .team-ferrari {
+      background-color: #fff0f0 !important;
+      font-weight: bold;
+    }
+    
+    .driver-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--red);
+    }
+    
+    .news-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px dashed #ccc;
+    }
+    
+    .news-item:last-child {
+      border-bottom: none;
+    }
+    
+    .news-date {
+      color: var(--red);
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+    
+    .leclerc-profile {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .leclerc-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .stat-item {
+      background: white;
+      padding: 1rem;
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    
+    .stat-value {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: var(--red);
+      margin: 0.5rem 0;
+    }
+    
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+    
+    @media (max-width: 768px) {
+      .grid-2cols {
+        grid-template-columns: 1fr;
+      }
+      
+      .leclerc-profile {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <h1>🏎️ Formule 1</h1>
-            <p>Saison 2024 - Calendrier et classements</p>
-            <a href="index.html" class="home-btn">← Retour à l'accueil</a>
-        </div>
-    </header>
-
+  <header>
+    <div class="header-pattern"></div>
     <div class="container">
-        <div class="sports-grid">
-            <!-- Prochain Grand Prix -->
-            <div class="race-card">
-                <div class="sport-image">
-                    <img src="https://images.unsplash.com/photo-1580261450048-dc1d5b8d3b1e" alt="Circuit F1">
-                    <div class="race-date">5 mars 2024</div>
-                </div>
-                <div class="sport-info">
-                    <h2>Grand Prix de Bahreïn</h2>
-                    <p><strong>Circuit :</strong> Sakhir</p>
-                    <p><strong>Tours :</strong> 57</p>
-                    <a href="#" class="btn">Voir horaires</a>
-                </div>
-            </div>
-
-            <!-- Classement Pilotes -->
-            <div class="sport-card">
-                <div class="sport-info">
-                    <h2>Classement 2023</h2>
-                    
-                    <div class="driver-card">
-                        <h3>1. Max Verstappen</h3>
-                        <p>Red Bull Racing - 575 points</p>
-                    </div>
-                    
-                    <div class="driver-card team-ferrari">
-                        <h3>2. Charles Leclerc</h3>
-                        <p>Ferrari - 308 points</p>
-                    </div>
-                    
-                    <div class="driver-card team-mercedes">
-                        <h3>3. Lewis Hamilton</h3>
-                        <p>Mercedes - 305 points</p>
-                    </div>
-                    
-                    <a href="#" class="btn">Classement complet</a>
-                </div>
-            </div>
-        </div>
+      <img src="https://www.formula1.com/etc/designs/fom-website/images/f1_logo.svg" alt="F1 Logo" class="f1-logo">
+      <h1>Formule 1 Saison 2025</h1>
+      <p>Toute l'actualité de la saison et focus sur Ferrari</p>
     </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2023 Mon Portail Sportif - Données F1 2023</p>
-    </footer>
+  <div class="container">
+    <!-- Line Up 2025 -->
+    <section>
+      <h2 class="section-title">Line Up 2025</h2>
+      <div class="card">
+        <div class="card-header">Liste des pilotes et écuries</div>
+        <div class="card-body">
+          <img src="https://cdn1.f1oversteer.com/uploads/37/2024/04/GettyImages-2028181537-1920x1074.jpg" alt="Grille F1 2025" style="width:100%; margin-bottom:1.5rem; border-radius:5px;">
+          
+          <table>
+            <thead>
+              <tr>
+                <th>N°</th>
+                <th>Pilote</th>
+                <th>Écurie</th>
+                <th>Nationalité</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="team-ferrari">
+                <td>16</td>
+                <td><strong>Charles Leclerc</strong></td>
+                <td>Ferrari</td>
+                <td>Monégasque</td>
+              </tr>
+              <tr class="team-ferrari">
+                <td>55</td>
+                <td>Carlos Sainz</td>
+                <td>Ferrari</td>
+                <td>Espagnol</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Max Verstappen</td>
+                <td>Red Bull Racing</td>
+                <td>Néerlandais</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Sergio Perez</td>
+                <td>Red Bull Racing</td>
+                <td>Mexicain</td>
+              </tr>
+              <tr>
+                <td>44</td>
+                <td>Lewis Hamilton</td>
+                <td>Mercedes</td>
+                <td>Britannique</td>
+              </tr>
+              <tr>
+                <td>63</td>
+                <td>George Russell</td>
+                <td>Mercedes</td>
+                <td>Britannique</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Lando Norris</td>
+                <td>McLaren</td>
+                <td>Britannique</td>
+              </tr>
+              <tr>
+                <td>81</td>
+                <td>Oscar Piastri</td>
+                <td>McLaren</td>
+                <td>Australien</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>Fernando Alonso</td>
+                <td>Aston Martin</td>
+                <td>Espagnol</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>Lance Stroll</td>
+                <td>Aston Martin</td>
+                <td>Canadien</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Pierre Gasly</td>
+                <td>Alpine</td>
+                <td>Français</td>
+              </tr>
+              <tr>
+                <td>31</td>
+                <td>Esteban Ocon</td>
+                <td>Alpine</td>
+                <td>Français</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Daniel Ricciardo</td>
+                <td>Visa Cash App RB</td>
+                <td>Australien</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td>Yuki Tsunoda</td>
+                <td>Visa Cash App RB</td>
+                <td>Japonais</td>
+              </tr>
+              <tr>
+                <td>77</td>
+                <td>Valtteri Bottas</td>
+                <td>Stake F1 Team Kick Sauber</td>
+                <td>Finlandais</td>
+              </tr>
+              <tr>
+                <td>24</td>
+                <td>Zhou Guanyu</td>
+                <td>Stake F1 Team Kick Sauber</td>
+                <td>Chinois</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>Kevin Magnussen</td>
+                <td>Haas F1 Team</td>
+                <td>Danois</td>
+              </tr>
+              <tr>
+                <td>27</td>
+                <td>Nico Hulkenberg</td>
+                <td>Haas F1 Team</td>
+                <td>Allemand</td>
+              </tr>
+              <tr>
+                <td>23</td>
+                <td>Alexander Albon</td>
+                <td>Williams</td>
+                <td>Thaïlandais</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Logan Sargeant</td>
+                <td>Williams</td>
+                <td>Américain</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Résultats et classements -->
+    <section>
+      <h2 class="section-title">Résultats & Classements</h2>
+      <div class="grid-2cols">
+        <!-- Grands Prix -->
+        <div class="card">
+          <div class="card-header">Résultats des 3 premiers GP</div>
+          <div class="card-body">
+            <h3>Australie 🇦🇺</h3>
+            <ol>
+              <li>Max Verstappen (Red Bull)</li>
+              <li>Charles Leclerc (Ferrari)</li>
+              <li>Sergio Perez (Red Bull)</li>
+              <li>Carlos Sainz (Ferrari)</li>
+              <li>Lando Norris (McLaren)</li>
+            </ol>
+            
+            <h3>Chine 🇨🇳</h3>
+            <ol>
+              <li>Max Verstappen (Red Bull)</li>
+              <li>Lewis Hamilton (Mercedes)</li>
+              <li>Charles Leclerc (Ferrari)</li>
+              <li>George Russell (Mercedes)</li>
+              <li>Carlos Sainz (Ferrari)</li>
+            </ol>
+            
+            <h3>Japon 🇯🇵</h3>
+            <ol>
+              <li>Max Verstappen (Red Bull)</li>
+              <li>Sergio Perez (Red Bull)</li>
+              <li>Charles Leclerc (Ferrari)</li>
+              <li>Carlos Sainz (Ferrari)</li>
+              <li>Lando Norris (McLaren)</li>
+            </ol>
+          </div>
+        </div>
+        
+        <!-- Classements -->
+        <div class="card">
+          <div class="card-header">Classements après 3 GP</div>
+          <div class="card-body">
+            <h3>Pilotes</h3>
+            <table>
+              <tr>
+                <th>Pos</th>
+                <th>Pilote</th>
+                <th>Points</th>
+              </tr>
+              <tr class="team-ferrari">
+                <td>1</td>
+                <td>Max Verstappen</td>
+                <td>78</td>
+              </tr>
+              <tr class="team-ferrari">
+                <td>2</td>
+                <td>Charles Leclerc</td>
+                <td>54</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Sergio Perez</td>
+                <td>46</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Carlos Sainz</td>
+                <td>38</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Lewis Hamilton</td>
+                <td>30</td>
+              </tr>
+            </table>
+            
+            <h3 style="margin-top:1.5rem;">Constructeurs</h3>
+            <table>
+              <tr>
+                <th>Pos</th>
+                <th>Écurie</th>
+                <th>Points</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Red Bull Racing</td>
+                <td>124</td>
+              </tr>
+              <tr class="team-ferrari">
+                <td>2</td>
+                <td>Ferrari</td>
+                <td>92</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Mercedes</td>
+                <td>48</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>McLaren</td>
+                <td>36</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Aston Martin</td>
+                <td>18</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transferts et actus Ferrari -->
+    <section>
+      <h2 class="section-title">Transferts & Actus Ferrari</h2>
+      <div class="card">
+        <div class="card-body">
+          <div class="news-item">
+            <div class="news-date">15 Avril 2025</div>
+            <h3>Ferrari confirme son duo de pilotes pour 2026</h3>
+            <p>Malgré les rumeurs, la Scuderia a officialisé le maintien de Charles Leclerc et Carlos Sainz pour la saison prochaine. Frederic Vasseur a déclaré : "Nous avons la meilleure paire de pilotes du paddock."</p>
+          </div>
+          
+          <div class="news-item">
+            <div class="news-date">8 Avril 2025</div>
+            <h3>Nouvelle amélioration aérodynamique en test</h3>
+            <p>Ferrari a testé avec succès un nouveau fond plat lors des essais privés à Fiorano. Cette évolution devrait être implémentée dès le GP de Miami.</p>
+          </div>
+          
+          <div class="news-item">
+            <div class="news-date">1 Avril 2025</div>
+            <h3>Hamilton chez Ferrari en 2026 ?</h3>
+            <p>Selon la presse italienne, Lewis Hamilton aurait eu des discussions secrètes avec John Elkann. Une décision serait attendue pour juin.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Focus Charles Leclerc -->
+    <section>
+      <h2 class="section-title">Focus : Charles Leclerc 🏎️❤️</h2>
+      <div class="card">
+        <div class="card-body">
+          <div class="leclerc-profile">
+            <img src="https://www.formula1.com/content/fom-website/en/drivers/charles-leclerc/_jcr_content/image.img.1024.medium.jpg/1647334259838.jpg" alt="Charles Leclerc" class="driver-img">
+            <div>
+              <h3>Charles Leclerc #16</h3>
+              <p>Pilote Ferrari depuis 2019, Charles est le grand espoir de la Scuderia pour ramener le titre mondial à Maranello. Malgré sa jeunesse, il a déjà signé 12 pole positions et 8 victoires en F1.</p>
+            </div>
+          </div>
+          
+          <div class="leclerc-stats">
+            <div class="stat-item">
+              <div>Âge</div>
+              <div class="stat-value">27</div>
+              <div>ans</div>
+            </div>
+            <div class="stat-item">
+              <div>Débuts F1</div>
+              <div class="stat-value">2018</div>
+              <div>Sauber</div>
+            </div>
+            <div class="stat-item">
+              <div>Victoires</div>
+              <div class="stat-value">8</div>
+              <div>en F1</div>
+            </div>
+            <div class="stat-item">
+              <div>Podiums</div>
+              <div class="stat-value">32</div>
+              <div>dont 5 en 2025</div>
+            </div>
+          </div>
+          
+          <h3 style="margin-top:1.5rem;">Palmarès 2025</h3>
+          <ul>
+            <li>🥈 Australie - 2ème place</li>
+            <li>🥉 Chine - 3ème place</li>
+            <li>🥉 Japon - 3ème place</li>
+            <li>Pole position en Australie</li>
+            <li>2 meilleurs tours en course</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Actualité Multisportive - Tous droits réservés</p>
+      <p>Retour à <a href="index.html" style="color:var(--yellow);">l'accueil</a></p>
+    </div>
+  </footer>
 </body>
 </html>
