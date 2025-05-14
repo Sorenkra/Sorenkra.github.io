@@ -3,27 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football - Mon Portail Sportif</title>
+    <title>Football | Sport Universe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0056b3;
-            --secondary: #003366;
-            --accent: #ffcc00;
+            --football-blue: #0056b3;
+            --dark-bg: #1A1A2E;
         }
-        /* [Même structure CSS que index.html avec adaptations] */
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--dark-bg);
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .football-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2070');
+            background-size: cover;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .football-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .football-header p {
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+        
+        .home-btn {
+            color: white;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        
         .news-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            gap: 20px;
         }
-        .news-card {
-            border-left: 4px solid var(--accent);
+        
+        .sport-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .sport-image {
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .sport-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .sport-info {
+            padding: 20px;
+        }
+        
+        .sport-info h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--football-blue);
+            margin: 0 0 10px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--football-blue);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        
+        footer {
+            background: #0F2027;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Football</h1>
+    <header class="football-header">
+        <h1>FOOTBALL</h1>
         <p>Toute l'actualité du ballon rond</p>
         <a href="index.html" class="home-btn">← Retour à l'accueil</a>
     </header>
@@ -32,7 +117,7 @@
         <div class="news-grid">
             <div class="sport-card">
                 <div class="sport-image">
-                    <img src="https://images.unsplash.com/photo-1579952363872-3f0862818f69" alt="Ligue 1">
+                    <img src="https://imgresizer.eurosport.com/unsafe/1200x0/filters:format(jpeg)/origin-imgresizer.eurosport.com/2023/05/27/3709015-75677448-2560-1440.jpg" alt="Ligue 1">
                 </div>
                 <div class="sport-info">
                     <h2>Ligue 1</h2>
@@ -43,7 +128,7 @@
 
             <div class="sport-card">
                 <div class="sport-image">
-                    <img src="https://images.unsplash.com/photo-1508098682722-e99c47a06b43" alt="PSG">
+                    <img src="https://www.psg.fr/media/245227/logo-psg.jpg?anchor=center&mode=crop&width=1200&height=675&quality=75" alt="PSG">
                 </div>
                 <div class="sport-info">
                     <h2>Paris SG</h2>
@@ -55,7 +140,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2023 Mon Portail Sportif</p>
+        <p>&copy; 2024 Sport Universe</p>
     </footer>
 </body>
 </html>
